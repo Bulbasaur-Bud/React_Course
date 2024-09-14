@@ -1,13 +1,9 @@
-import Header from "./assets/Header";
-import Footer from "./assets/Footer";
-import Food from "./assets/Food";
+import Card from "./Card";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Food />
-      <Footer />
+      <Card />
     </div>
   );
 }
