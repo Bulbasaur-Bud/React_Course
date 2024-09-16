@@ -5,6 +5,7 @@ import UserGreeting from "./UserGreeting";
 import List from "./List";
 import MyComponent from "./MyComponent";
 import Counter from "./Counter";
+import ColorPicker from "./ColorPicker";
 
 function App() {
   const fruits = [
@@ -26,6 +27,7 @@ function App() {
   return (
     <div>
       <Card />
+      <ColorPicker />
       <Counter />
       <br />
       <MyComponent />
