@@ -1,6 +1,7 @@
 body {
   background-image: url(assets/wallpaper.png);
   background-position: center;
+  background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -9,6 +10,63 @@ body {
   justify-content: center;
   min-height: 100hv;
   align-items: center;
+  flex-direction: column;
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid;
+  border-radius: 50px;
+  background-color: white;
+  padding: 30px;
+}
+
+.display {
+  font-size: 5rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: rgb(45, 51, 51);
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 25px;
+}
+
+.controls button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 5px;
+  min-width: 125px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: wheat;
+  transition: background-color 0.5s ease;
+}
+
+.start-button {
+  background-color: hsl(120, 100%, 40%);
+}
+
+.start-button:hover {
+  background-color: hsl(120, 100%, 35%);
+}
+
+.stop-button {
+  background-color: hsl(345, 100%, 40%);
+}
+
+.stop-button:hover {
+  background-color: hsl(345, 100%, 35%);
+}
+
+.reset-button {
+  background-color: hsl(258, 100%, 40%);
+}
+
+.reset-button:hover {
+  background-color: hsl(258, 100%, 35%);
 }
 
 .clock-container {
