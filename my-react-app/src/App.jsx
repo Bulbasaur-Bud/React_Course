@@ -32,9 +32,6 @@ function App() {
       <DigitalClock />
       <Stopwatch />
       <Stopwatch />
-      <Stopwatch />
-      <Stopwatch />
-      <Stopwatch />
       <ColorPicker />
       <Counter />
       <br />
