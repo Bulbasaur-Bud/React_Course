@@ -28,6 +28,35 @@ function MyComponent() {
   //   </div>
   // );
 
+  const [cars, setCars] = useState([]);
+  const [carYear, setCarYear] = useState(new Date().getFullYear());
+  const [carMake, setCarMake] = useState("");
+  const [carModel, setCarModel] = useState("");
+
+  function handleAddCar() {
+    const newCar = { year: carYear, make: carMake, model: carModel };
+
+    setCars((prevCar) => [...prevCar, newCar]);
+    setCarYear(new Date().getFullYear());
+    setCarMake("");
+    setCarModel("");
+  }
+
+  function handleRemoveCar(index) {
+    setCars((prevCar) => prevCar.filter((_, i) => i !== index));
+  }
+
+  function handleYearChange(event) {
+    setCarYear(event.target.value);
+  }
+
+  function handleMakeChange(event) {
+    setCarMake(event.target.value);
+  }
+
+  function handleModelChange(event) {
+    setCarModel(event.target.value);
+  }
   //onChange Function
 
   const [name, setName] = useState("Guest");
@@ -36,11 +65,11 @@ function MyComponent() {
   const [payment, setPayment] = useState("");
   const [shipping, setShipping] = useState("Delivery");
 
-  const [car, setCar] = useState({
-    year: 2024,
-    make: "Ford",
-    model: "Mustang",
-  });
+  // const [car, setCar] = useState({
+  //   year: 2024,
+  //   make: "Ford",
+  //   model: "Mustang",
+  // });
 
   const [foods, setFoods] = useState(["Apple", "Orange", "Banana"]);
 
@@ -75,17 +104,17 @@ function MyComponent() {
     setShipping(event.target.value);
   }
 
-  function handleYearChange(event) {
-    setCar((prevCar) => ({ ...prevCar, year: event.target.value }));
-  }
+  // function handleYearChange(event) {
+  //   setCar((prevCar) => ({ ...prevCar, year: event.target.value }));
+  // }
 
-  function handleMakeChange(event) {
-    setCar((prevCar) => ({ ...prevCar, make: event.target.value }));
-  }
+  // function handleMakeChange(event) {
+  //   setCar((prevCar) => ({ ...prevCar, make: event.target.value }));
+  // }
 
-  function handleModelChange(event) {
-    setCar((prevCar) => ({ ...prevCar, model: event.target.value }));
-  }
+  // function handleModelChange(event) {
+  //   setCar((prevCar) => ({ ...prevCar, model: event.target.value }));
+  // }
 
   return (
     <div>
@@ -99,14 +128,41 @@ function MyComponent() {
       </ul>
       <input type="text" id="foodInput" placeholder="Enter food name" />
       <button onClick={handleAddFood}>Add Food</button>
-      <p>
+      {/* <p>
         Your favourite car is : {car.year} {car.make} {car.model}
       </p>
       <input type="number" value={car.year} onChange={handleYearChange} />
       <input type="text" value={car.make} onChange={handleMakeChange} />
       <input type="text" value={car.model} onChange={handleModelChange} />
       <input value={name} onChange={handleNameChange} />
+      <br /> */}
+
+      <h2>List of Car Objects</h2>
+      <ul>
+        {cars.map((car, index) => (
+          <li key={index} onClick={() => handleRemoveCar(index)}>
+            {car.year} {car.make} {car.model}
+          </li>
+        ))}
+      </ul>
+
+      <input type="number" value={carYear} onChange={handleYearChange} />
       <br />
+      <input
+        type="text"
+        value={carMake}
+        onChange={handleMakeChange}
+        placeholder="Enter Car Make"
+      />
+      <br />
+      <input
+        type="text"
+        value={carModel}
+        onChange={handleModelChange}
+        placeholder="Enter Car Model"
+      />
+      <br />
+      <button onClick={handleAddCar}>Add Car Here!</button>
 
       <p>Name: {name}</p>
 

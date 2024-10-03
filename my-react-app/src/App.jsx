@@ -6,6 +6,7 @@ import List from "./List";
 import MyComponent from "./MyComponent";
 import Counter from "./Counter";
 import ColorPicker from "./ColorPicker";
+import DigitalClock from "./DigitalClock";
 
 function App() {
   const fruits = [
@@ -27,6 +28,10 @@ function App() {
   return (
     <div>
       <Card />
+      <DigitalClock />
+      <DigitalClock />
+      <DigitalClock />
+      <DigitalClock />
       <ColorPicker />
       <Counter />
       <br />

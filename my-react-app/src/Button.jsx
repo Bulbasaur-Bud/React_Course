@@ -15,7 +15,11 @@
 function Button() {
   const handleClick = () => console.log("Ouch!");
   const handleClick2 = (name) => console.log(`${name} stop cliking me!`);
-  return <button onClick={() => handleClick2("Praphan")}>Click Me 😃</button>;
+  return (
+    <div>
+      <button onClick={() => handleClick2("Praphan")}>Click Me 😃</button>
+    </div>
+  );
 }
 
 export default Button;

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function UserGreeting(props) {
   const welcomeMessage = (
-    <h2 className="welcome-message">Welcome {props.username}</h2>
+    <h2 className="welcome-message">Welcome {props.np}</h2>
   );
 
   const loginPrompt = (

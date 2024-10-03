@@ -3,7 +3,7 @@ function Card() {
     <div className="card">
       <img
         className="card-image"
-        src="https://media.licdn.com/dms/image/v2/D5635AQEB4F_x9vOu7Q/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1681891509265?e=1726920000&v=beta&t=p8Wqw6YXexbeOY-k9ae-wijMIZNquoFpI75BeK79TOk"
+        src="https://www.gamespot.com/a/uploads/scale_landscape/1575/15759911/3462057-pokemon-lets-go-pikachu-review-thumb-nologo.jpg"
         width="200"
         height="200"
         alt="profile picture"
